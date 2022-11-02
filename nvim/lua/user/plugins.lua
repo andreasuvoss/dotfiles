@@ -42,8 +42,11 @@ return packer.startup(function(use)
 
 	
 	use { 'vim-airline/vim-airline', tag = 'v0.11' }
-	use { 'Mofiqul/dracula.nvim', commit = 'ca1fc7a554386c2d31996ee28c8ad70731117bce' }
+	use { 'Mofiqul/dracula.nvim', commit = '7ff76dd8248efeabb322fec87b22d33c129536fe' }
 	use { 'luochen1990/rainbow', tag = 'v3.3.1' }
+	use { 'nvim-telescope/telescope.nvim', tag ='0.1.0',
+		requires = { { 'nvim-lua/plenary.nvim' } } 
+	}
 	use { 'nvim-neo-tree/neo-tree.nvim', tag = '2.43', 
 		requires = { 
 			"nvim-lua/plenary.nvim", 

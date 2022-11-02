@@ -7,6 +7,7 @@ vim.opt.ignorecase = true
 vim.opt.mouse = "a"
 vim.opt.conceallevel = 0
 vim.opt.clipboard = "unnamedplus"
+vim.opt.tabstop = 4
 
 vim.g.rainbow_active = 1
 vim.g['airline#extensions#tabline#enabled'] = 1

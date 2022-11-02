@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/andreasvoss/.local/share/nvim/site/pack/packer/start/rainbow",
     url = "https://github.com/luochen1990/rainbow"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/andreasvoss/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/andreasvoss/.local/share/nvim/site/pack/packer/start/vim-airline",
