@@ -4,6 +4,7 @@ local modules = {
 	"user.plugins",
 	"user.keybindings",
 	"user.telescope",
+	"user.surround",
 }
 
 for k, v in pairs(modules) do

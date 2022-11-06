@@ -1,0 +1,17 @@
+set visualbell
+set noerrorbells # save my sanity please
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+:set relativenumber
+:set number 
+let mapleader=","
+
+" Not sure about this
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+
+
+nnoremap <leader>ff :action SearchEverywhere<CR>
+nnoremap <leader>im :action GotoImplementation<CR>
+nnoremap <leader>de :action GotoDeclaration<CR>
