@@ -9,6 +9,8 @@ vim.opt.mouse = "a"
 vim.opt.conceallevel = 0
 vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 vim.g.rainbow_active = 1
 vim.g['airline#extensions#tabline#enabled'] = 1
