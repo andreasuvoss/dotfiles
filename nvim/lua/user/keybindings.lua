@@ -23,9 +23,20 @@ vim.g.maplocalleader = ","
 
 -- Custom keybinds
 --map("n", "<C-t>", ":NeoTreeFocusToggle<CR>")
-map("n", "<leader>e", ":NeoTreeFocusToggle<CR>")
+map("n", "<leader>e", ":Neotree<CR>")
+map("n", "<C-z>", ":Neotree toggle<CR>")
 map("n", "<leader>ff", ":Telescope find_files<CR>")
+map("n", "<leader>fg", ":Telescope live_grep<CR>")
 
 -- Move better between vertical splits
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-l>", "<C-w>l")
+
+-- Tabbing
+map("v", "<", "<gv")
+map("v", ">", ">gv")
+map("v", "<S-Tab>", "<gv")
+map("v", "<Tab>", ">gv")
+
+map("n", "<S-Tab>", "<<_")
+map("n", "<Tab>", ">>_")

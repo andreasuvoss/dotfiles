@@ -2,6 +2,8 @@
 
 # Useful options
 export ZDOTDIR="$HOME/.config/zsh"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
 HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=10000
@@ -47,7 +49,7 @@ setopt correct_all # autocorrect commands
 source "$ZDOTDIR/zsh-functions"
 
 zsh_add_file "zsh-prompt"
-zsh_add_file "zsh-vim-mode"
+#zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"

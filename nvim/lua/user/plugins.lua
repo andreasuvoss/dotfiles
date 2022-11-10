@@ -40,11 +40,28 @@ packer.init {
 
 return packer.startup(function(use)
 
-	
-	use { 'vim-airline/vim-airline', tag = 'v0.11' }
-	use { 'Mofiqul/dracula.nvim', commit = '7ff76dd8248efeabb322fec87b22d33c129536fe' }
-	use { 'luochen1990/rainbow', tag = 'v3.3.1' }
+    -- Treesitter, Better syntax highlighting.
+    -- https://github.com/nvim-treesitter/nvim-treesitter
+    use { "nvim-treesitter/nvim-treesitter", commit = "8ec59aee8097c64fcf27d1dbd77ea181c50846c5",
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+
+    -- Treesitter Rainbow, Making pair brackets same color.
+    -- https://github.com/p00f/nvim-ts-rainbow
+    use { "p00f/nvim-ts-rainbow", commit = "fad8badcd9baa4deb2cf2a5376ab412a1ba41797"}
+	use { "kyazdani42/nvim-web-devicons" }
+    use { "nvim-lua/plenary.nvim", commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7" }
+    use { "akinsho/bufferline.nvim", tag = "v2.11.1" }
+	use { 'Mofiqul/dracula.nvim', commit = '0b4f6e009867027caddc1f28a81d8a7da6a2b277' }
     use { "kylechui/nvim-surround", tag = "v1.0.0" }
+    use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
+    use {
+        'nvim-lualine/lualine.nvim', commit = "3325d5d43a7a2bc9baeef2b7e58e1d915278beaf",
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 	use { 'nvim-telescope/telescope.nvim', tag ='0.1.0',
 		requires = { { 'nvim-lua/plenary.nvim' } } 
 	}
