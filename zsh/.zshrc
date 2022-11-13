@@ -2,6 +2,7 @@
 
 # Useful options
 export ZDOTDIR="$HOME/.config/zsh"
+export PATH="$PATH:$HOME/.cargo/bin"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 

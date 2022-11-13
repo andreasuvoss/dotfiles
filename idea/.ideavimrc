@@ -15,3 +15,7 @@ nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 nnoremap <leader>ff :action SearchEverywhere<CR>
 nnoremap <leader>im :action GotoImplementation<CR>
 nnoremap <leader>de :action GotoDeclaration<CR>
+nnoremap <leader>fm :action ReformatCode<CR>
+" Git blame toggle
+nnoremap <leader>gb :action Annotate<CR>
+nnoremap <leader>rr :action Rerun<CR>

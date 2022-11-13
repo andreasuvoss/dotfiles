@@ -1,4 +1,5 @@
 local modules = {
+    "user.autocommands",
 	"user.theme",
 	"user.options",
 	"user.plugins",
@@ -9,6 +10,11 @@ local modules = {
     "user.bufferline",
     "user.lualine",
     "user.treesitter",
+    "user.cmp",
+    "user.lsp",
+    -- "user.startup",
+    "user.comment",
+    "user.gitsigns",
 }
 
 for k, v in pairs(modules) do
