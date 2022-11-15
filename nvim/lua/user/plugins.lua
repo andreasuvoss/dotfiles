@@ -105,6 +105,8 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim", commit="4b7e52044bbb84242158d977a50c4cbcd85070c7" })
 	use({ "MunifTanjim/nui.nvim", commit="d12a6977846b2fa978bff89b439e509320854e10" })
 	use({ "kyazdani42/nvim-web-devicons" })
+		
+	use({ "towolf/vim-helm" })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
