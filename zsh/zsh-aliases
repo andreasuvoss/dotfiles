@@ -1,1 +1,2 @@
 alias cat="bat -P -n"
+alias helm="nocorrect helm"

@@ -27,7 +27,6 @@ map("n", "<leader>e", ":Neotree<CR>")
 map("n", "<C-z>", ":Neotree toggle<CR>")
 map("n", "<leader>ff", ":Telescope find_files<CR>")
 map("n", "<leader>lg", ":Telescope live_grep<CR>")
-map("n", "<leader>fm", ":lua vim.lsp.buf.format({ async=true })<CR>")
 map("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>")
 
 -- Move better between vertical splits
