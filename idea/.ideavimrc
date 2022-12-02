@@ -23,3 +23,6 @@ nnoremap <leader>lf :action ReformatCode<CR>
 " Git blame toggle
 nnoremap <leader>gb :action Annotate<CR>
 nnoremap <leader>rr :action Rerun<CR>
+
+vnoremap < <gv
+vnoremap > >gv
