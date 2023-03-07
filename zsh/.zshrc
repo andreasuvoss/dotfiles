@@ -5,6 +5,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export PATH="$PATH:$HOME/.cargo/bin"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export KUBECONFIG="./kubeconfig"
 
 HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=10000
@@ -49,9 +50,11 @@ setopt correct_all # autocorrect commands
 
 source "$ZDOTDIR/zsh-functions"
 
-zsh_add_file "zsh-prompt"
+#zsh_add_file "zsh-prompt"
 #zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
+
+eval "$(starship init zsh)"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
