@@ -28,4 +28,11 @@ M.gitsigns = {
   }
 }
 
+M.neotree = {
+  n = {
+    ["<leader>e"] = {":Neotree<CR>"},
+    ["<C-z>"] = {":Neotree toggle<CR>"},
+  }
+}
+
 return M
