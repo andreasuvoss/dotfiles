@@ -1,5 +1,6 @@
 # Created by newuser for 5.8.1
 
+
 # Useful options
 export ZDOTDIR="$HOME/.config/zsh"
 export PATH="$PATH:$HOME/.cargo/bin"
@@ -58,3 +59,7 @@ eval "$(starship init zsh)"
 
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
