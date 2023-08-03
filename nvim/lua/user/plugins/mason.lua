@@ -1,0 +1,55 @@
+return {
+    'williamboman/mason.nvim',
+    dependencies = {
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+        "hrsh7th/cmp-nvim-lsp"
+    },
+    config = function()
+        vim.api.nvim_create_autocmd('LspAttach', {
+            desc = 'LSP actions',
+            callback = function(event)
+                local map = function(m, lhs, rhs)
+                    local opts = { buffer = event.buf }
+                    vim.keymap.set(m, lhs, rhs, opts)
+                end
+
+                vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+                    border = "rounded",
+                })
+
+                vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+                    border = "rounded",
+                })
+
+                map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+                map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+                map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
+                map('n', 'gI', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+                map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+                map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
+                map({ 'n', 'x' }, '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
+            end
+        })
+
+        require('mason').setup()
+        require('mason-lspconfig').setup({
+            ensure_installed = {
+                'lua_ls',
+                'rust_analyzer',
+                'tsserver'
+            }
+        })
+
+        local lspconfig = require('lspconfig')
+        local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+        require('mason-lspconfig').setup_handlers({
+            function(server_name)
+                lspconfig[server_name].setup({
+                    capabilities = lsp_capabilities
+                })
+            end
+        })
+    end
+}
