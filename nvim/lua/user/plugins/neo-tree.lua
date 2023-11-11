@@ -1,9 +1,6 @@
-local plugins = {
-  {
+return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
-    cmd = { "Neotree" },
-    lazy = true,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
@@ -48,22 +45,4 @@ local plugins = {
         }
       })
     end,
-  },
-  {
-    'stevearc/oil.nvim',
-    opts = {},
-    -- Optional dependencies
-    lazy = false,
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-      vim.keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
-      require("oil").setup()
-    end
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    enabled = false
-  }
 }
-
-return plugins
