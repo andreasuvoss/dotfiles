@@ -29,6 +29,8 @@ vim.opt.colorcolumn = "120"
 
 vim.opt.clipboard = "unnamedplus"
 
+vim.cmd [[autocmd FileType markdown set tw=120 wrap]]
+
 -- vim.opt.autoindent = true
 -- vim.opt.smarttab = true
 -- vim.opt.splitright = true
