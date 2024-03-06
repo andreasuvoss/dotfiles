@@ -3,8 +3,8 @@ set noerrorbells # save my sanity please
 
 set commentary
 autocmd FileType cs setlocal commentstring=//\ %s
-set clipboard+=unnamed
-set clipboard+=ideaput
+set clipboard+=unnamedplus
+" set clipboard+=ideaput
 
 :set relativenumber
 :set number 
@@ -23,6 +23,8 @@ nnoremap <leader>lf :action ReformatCode<CR>
 " Git blame toggle
 nnoremap <leader>gb :action Annotate<CR>
 nnoremap <leader>rr :action Rerun<CR>
+nnoremap H :action Back<CR>
+nnoremap L :action Forward<CR>
 
 vnoremap < <gv
 vnoremap > >gv

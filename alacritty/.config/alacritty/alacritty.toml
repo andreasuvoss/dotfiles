@@ -1,0 +1,19 @@
+import = ["~/.config/alacritty/dracula.toml"]
+
+[font]
+size = 9.0
+
+[selection]
+save_to_clipboard = true
+
+[window]
+title = "hi"
+decorations = "None"
+
+[window.dimensions]
+columns = 250
+lines = 60
+
+[window.padding]
+x = 10
+y = 10

@@ -1,5 +1,5 @@
-nvim/plugin
-zsh/plugins/
-nvim/spell
+nvim/.config/nvim/plugin
+zsh/.config/zsh/plugins/
+nvim/.config/nvim/spell
 .zsh_history
 .zcompdump
