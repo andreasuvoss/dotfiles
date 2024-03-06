@@ -1,4 +1,5 @@
 import = ["~/.config/alacritty/dracula.toml"]
+live_config_reload = true
 
 [font]
 size = 9.0
@@ -8,7 +9,7 @@ save_to_clipboard = true
 
 [window]
 title = "hi"
-decorations = "None"
+# decorations = "None"
 
 [window.dimensions]
 columns = 250
@@ -17,3 +18,7 @@ lines = 60
 [window.padding]
 x = 10
 y = 10
+
+[shell]
+program = "/bin/zsh"
+args = ["-c", "zellij attach --index 0 || zellij"]
