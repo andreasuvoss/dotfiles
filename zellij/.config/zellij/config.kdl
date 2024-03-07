@@ -1,3 +1,7 @@
+// pane_frames false
+
+layout "default"
+
 theme "dracula"
 
 themes {
