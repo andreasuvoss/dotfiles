@@ -1,0 +1,8 @@
+[user]
+	email = andreas@anvo.dk
+	name = Andreas Voss
+	signingkey = A8D4CDB8F5369BAB
+[push]
+	autoSetupRemote = true
+[commit]
+	gpgsign = true
