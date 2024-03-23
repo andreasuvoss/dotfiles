@@ -2,12 +2,12 @@
 
 layout "default"
 
-theme "dracula"
+theme "draculacustom"
 
 themes {
-   dracula {
+   draculacustom {
         fg 248 248 242
-        bg 40 42 54
+        bg 68 71 90
         black 0 0 0
         red 255 85 85
         green 80 250 123
