@@ -1,6 +1,7 @@
 // pane_frames false
 
 layout "default"
+// copy_on_select false
 
 theme "draculacustom"
 
@@ -8,7 +9,7 @@ themes {
    draculacustom {
         fg 248 248 242
         bg 68 71 90
-        black 0 0 0
+        black 68 71 90 
         red 255 85 85
         green 80 250 123
         yellow 241 250 140
