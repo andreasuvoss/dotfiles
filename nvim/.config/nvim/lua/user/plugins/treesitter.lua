@@ -6,7 +6,7 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup({
           ensure_installed = "all", -- one of "all" or a list of languages
-          ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
+          ignore_install = { "phpdoc", "d", "wing" }, -- List of parsers to ignore installing
           highlight = {
             enable = true, -- false will disable the whole extension
             additional_vim_regex_highlighting = false,
