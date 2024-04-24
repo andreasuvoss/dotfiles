@@ -16,6 +16,7 @@ setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
 setopt inc_append_history # save history entries as soon as they are entered
 setopt share_history # share history between different instances of the shell
+setopt globdots # files can start with .
 
 #setopt autocd extendedglob nomatch menucomplete
 setopt autocd extendedglob nomatch
