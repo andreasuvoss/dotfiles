@@ -24,9 +24,11 @@ return {
 
                 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
                 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+                map('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
                 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>')
                 map('n', 'gI', '<cmd>lua vim.lsp.buf.implementation()<cr>')
                 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+                map('n', '<a-cr>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
                 map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
                 map({ 'n', 'x' }, '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
             end

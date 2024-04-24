@@ -18,10 +18,12 @@ nnoremap <leader>ff :action SearchEverywhere<CR>
 nnoremap <leader>lg :action FindInPath<CR>
 nnoremap gI :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
+nnoremap gr :action ShowUsages<CR>
 " nnoremap gcc :action CommentByLineComment<CR>
 nnoremap <leader>lf :action ReformatCode<CR>
 " Git blame toggle
 nnoremap <leader>gb :action Annotate<CR>
+
 nnoremap <leader>rr :action Rerun<CR>
 nnoremap H :action Back<CR>
 nnoremap L :action Forward<CR>
