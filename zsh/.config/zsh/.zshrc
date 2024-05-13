@@ -7,6 +7,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export KUBECONFIG="./kubeconfig"
+export BAT_THEME="Dracula"
 
 HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=10000
