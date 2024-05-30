@@ -8,9 +8,29 @@ return {
         "hrsh7th/cmp-path"
     },
     config = function()
-
         local cmp = require('cmp')
         local luasnip = require('luasnip')
+
+        luasnip.config.set_config({
+            region_check_events = 'InsertEnter',
+            delete_check_events = 'InsertLeave'
+        })
+
+        -- Example of luasnip snippets
+        -- local s = luasnip.snippet
+        -- local t = luasnip.text_node
+        -- local i = luasnip.insert_node
+
+        -- luasnip.add_snippets("lua", {
+        --     s("example", {
+        --         t('print("hello '),
+        --         i(1, "my"),
+        --         t(' world '),
+        --         i(2),
+        --         t('")'),
+        --     })
+        -- })
+
 
         local check_backspace = function()
             local col = vim.fn.col(".") - 1
@@ -47,15 +67,26 @@ return {
         }
 
         cmp.setup({
+            completion = {
+                -- enable this to select first item automatically
+                -- completeopt = "menu,menuone,preview",
+            },
+            window = {
+                -- border = "single",
+                -- TODO
+                -- completion = cmp.config.window.bordered(),
+                -- documentation = cmp.config.window.bordered(),
+            },
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
                 end,
             },
             mapping = {
-                ["<Up>"] = cmp.mapping.select_prev_item(), -- Mapped to Caps Lock + k
+                ["<Up>"] = cmp.mapping.select_prev_item(),   -- Mapped to Caps Lock + k
                 ["<Down>"] = cmp.mapping.select_next_item(), -- Mapped to Caps Lock + j
-                ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                -- set select = true to auto accept the first item suggested
+                ["<CR>"] = cmp.mapping.confirm({ select = false }),
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         cmp.select_next_item()
